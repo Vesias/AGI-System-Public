@@ -429,8 +429,8 @@ EOF
 EOF
     
     # Erstelle README für memory-bank
-    cat > memory-bank/README.md << EOF
-# Memory Bank für $PROJECT_NAME
+    cat > memory-bank/README.md << 'EOF'
+# Memory Bank für '$PROJECT_NAME'
 
 Diese Memory Bank enthält wichtige Kontextinformationen und Dokumentation für das Projekt.
 
@@ -446,8 +446,11 @@ Diese Memory Bank enthält wichtige Kontextinformationen und Dokumentation für 
 
 ## Vector Index
 
-Im Verzeichnis `vector_index` werden Einbettungen und semantische Suchdaten gespeichert.
+Im Verzeichnis \`vector_index\` werden Einbettungen und semantische Suchdaten gespeichert.
 EOF
+
+    # Fix the PROJECT_NAME variable in README.md
+    sed -i "s/'\\$PROJECT_NAME'/$PROJECT_NAME/g" memory-bank/README.md
     
     # Berechtigungen setzen
     chmod -R 755 memory-bank
@@ -1230,13 +1233,18 @@ EOF
     log "SUCCESS" "MCP-Tools eingerichtet."
     
     # Wenn interaktiv, NPM-Abhängigkeiten optional installieren
-    if [ "$INTERACTIVE_MODE" = true ]; then
-        echo -e "${YELLOW}Möchten Sie die NPM-Abhängigkeiten für MCP-Tools installieren? (j/n)${NC}"
-        read -r INSTALL_NPM
-        
-        if [[ "$INSTALL_NPM" =~ ^[Jj] ]]; then
-            log "INFO" "Installiere NPM-Abhängigkeiten..."
-            npm install
+    if [ "$INTERACTIVE_MODE" = true ] && [ "$MCP_TOOLS_ENABLED" = true ]; then
+        # Nur wenn package.json existiert
+        if [ -f "package.json" ]; then
+            echo -e "${YELLOW}Möchten Sie die NPM-Abhängigkeiten für MCP-Tools installieren? (j/n)${NC}"
+            read -r INSTALL_NPM
+            
+            if [[ "$INSTALL_NPM" =~ ^[Jj] ]]; then
+                log "INFO" "Installiere NPM-Abhängigkeiten..."
+                npm install
+            fi
+        else
+            log "WARNING" "package.json nicht gefunden. Überspringe NPM-Installation."
         fi
     fi
     
@@ -1260,7 +1268,11 @@ chmod -R 755 DOCS
 chmod -R 755 memory-bank
 chmod -R 755 .config
 chmod 644 .about.interactive
-chmod 644 package.json
+
+# Nur wenn package.json existiert
+if [ -f "package.json" ]; then
+    chmod 644 package.json
+fi
 
 # Falls Qdrant aktiviert ist
 if [ -f "start-qdrant.sh" ]; then
