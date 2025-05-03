@@ -1,0 +1,54 @@
+{
+  "system": {
+    "version": "1.0.0",
+    "name": "AGI-System",
+    "description": "Ein Framework zur Organisation und Verwaltung von Claude-basierten Projekten",
+    "repository": "https://github.com/Vesias/AGI-System-Public"
+  },
+  "paths": {
+    "projectsRoot": "${HOME}/Schreibtisch/CLAUDE",
+    "templates": "${HOME}/.claude/templates",
+    "backups": "${HOME}/.claude/backups",
+    "logs": "${HOME}/.claude/logs"
+  },
+  "features": {
+    "memoryBank": true,
+    "mcpTools": true,
+    "autoBackup": true,
+    "vibeCoding": true
+  },
+  "defaults": {
+    "projectStructure": [
+      "APP",
+      "MARKETING",
+      "FINANCE",
+      "DOCS",
+      "memory-bank"
+    ],
+    "memoryBankFiles": [
+      "projectbrief.md",
+      "productContext.md",
+      "activeContext.md",
+      "systemPatterns.md",
+      "techContext.md",
+      "progress.md",
+      ".clauderules"
+    ]
+  },
+  "scripts": {
+    "initProject": "init_project.sh",
+    "updateMemory": "update_memory.sh",
+    "backupProject": "backup_project.sh"
+  },
+  "ui": {
+    "theme": "dark",
+    "language": "de-DE",
+    "colorScheme": {
+      "primary": "#3498db",
+      "secondary": "#2ecc71",
+      "accent": "#9b59b6",
+      "background": "#1a1a1a",
+      "foreground": "#ffffff"
+    }
+  }
+}

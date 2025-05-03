@@ -1,0 +1,65 @@
+# Vertrauliche Nutzerinformationen
+# Diese Datei enthält sensible Informationen, die nicht öffentlich zugänglich sein sollten
+
+## Nutzer
+USER_NAME="Jan"
+USER_LOCATION="Saarland 66538 && WEB"
+
+## Geschäftsinformationen
+BUSINESSES=[
+  {
+    "name": "AClearAllB.gg",
+    "description": "Solana-basierte Plattform für NFT-Spielerkarten mit Datenanalyse, 3D-Visualisierung und Blockchain-Integration",
+    "status": "Aktiv"
+  },
+  {
+    "name": "CustomGrow.club",
+    "description": "Moderne Web-Plattform (Next.js 15, TypeScript, Tailwind CSS, Supabase) mit KI-Features und Business-Analytics",
+    "status": "Aktiv"
+  },
+  {
+    "name": "Goldankauf",
+    "description": "Lokales Edelmetall-Ankaufgeschäft mit Digitalisierungsbedarf",
+    "status": "Aktiv"
+  },
+  {
+    "name": "DeepSleep",
+    "description": "AMAZON FBA Mundklebeband für Schlaf",
+    "status": "SAMPLETESTING-Phase"
+  },
+  {
+    "name": "SJ Bandolersoz",
+    "description": "STREETBRANDWARE-Marke",
+    "status": "HERSTELLERFINDUNG-Phase"
+  }
+]
+
+## Ziele
+GOALS_LONGTERM=[
+  "Serhan + GESUNDHEIT + RUHESTAND - 2028",
+  "Jan mindestens bis 30 eine Million in Rücklagen"
+]
+
+GOALS_SHORTTERM=[
+  "SAMPLETESTING - DeepSleep (AMAZON FBA) Mundklebeband für Schlaf-> waiting",
+  "HERSTELLERFINDUNG - SJ Bandolersoz (STREETBRANDWARE)"
+]
+
+## Technische Expertise
+TECH_EXPERTISE=[
+  "Webentwicklung: Next.js, React, TypeScript, Tailwind CSS",
+  "Backend: Supabase, PostgreSQL, Serverless Functions",
+  "3D/Visualisierung: React Three Fiber, Framer Motion",
+  "Blockchain: Solana, NFTs, Metaplex",
+  "E-Commerce: Amazon FBA, Conversion-Optimierung",
+  "Datenanalyse: Business Intelligence, KI-Integration"
+]
+
+## Kommunikationsstil
+COMMUNICATION_STYLE=[
+  "Technik-affine Erklärungen",
+  "Geschäftsorientierte Lösungen",
+  "Fokus auf Umsetzbarkeit und ROI",
+  "Klare Prioritäten und Zeitpläne",
+  "Direkter Kommunikationsstil ohne Umschweife"
+]

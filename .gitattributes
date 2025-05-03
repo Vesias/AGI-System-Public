@@ -1,0 +1,7 @@
+# Definiere Dateien, die mit git-crypt verschlüsselt werden sollen
+.git-crypt/** filter=git-crypt diff=git-crypt
+*.key filter=git-crypt diff=git-crypt
+*.secret filter=git-crypt diff=git-crypt
+**/secrets/** filter=git-crypt diff=git-crypt
+**/private/** filter=git-crypt diff=git-crypt
+**/.env filter=git-crypt diff=git-crypt

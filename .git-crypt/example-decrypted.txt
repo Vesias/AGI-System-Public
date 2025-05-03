@@ -1,0 +1,8 @@
+Dies ist eine Beispieldatei, um zu testen, ob git-crypt erfolgreich entschlüsselt wurde.
+
+Wenn du diese Datei lesen kannst, bedeutet das:
+1. git-crypt wurde erfolgreich installiert
+2. Du hast Zugriff auf die verschlüsselten Inhalte
+3. Die Entschlüsselung funktioniert korrekt
+
+Erfolgreich entschlüsselt!

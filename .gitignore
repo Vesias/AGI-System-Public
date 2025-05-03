@@ -1,0 +1,35 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Lokale Konfigurationen
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Vom System generierte Dateien
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+tmp/
+
+# IDE-Dateien
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# Nicht-verschlüsselte sensible Dateien
+# (diese werden nicht ins Repo aufgenommen, sensible Daten sollten in .git-crypt/ abgelegt werden)
+unencrypted-secrets/
+local-only/
+
+# Dateien, die nur lokal verwendet werden
+.git-crypt/keys/
+**/local-dev/
