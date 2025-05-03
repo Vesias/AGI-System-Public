@@ -20,7 +20,7 @@ Der MCP-Tools-Integrator ermöglicht die Erstellung eines vollständig konfiguri
 
 ```bash
 # Klonen des Repositories
-git clone https://github.com/user/AGI-System-Public.git
+git clone https://github.com/Vesias/AGI-System-Public.git
 cd AGI-System-Public
 
 # Direktes Ausführen des Master-Initialisierers
@@ -31,7 +31,7 @@ cd AGI-System-Public
 
 ```bash
 # Einrichtung eines neuen Projekts mit einem einzigen Befehl
-curl -sSfL https://raw.githubusercontent.com/user/AGI-System-Public/main/core/scripts/master-init.sh | bash -s -- --project PROJEKTNAME
+curl -sSfL https://raw.githubusercontent.com/Vesias/AGI-System-Public/main/core/scripts/master-init.sh | bash -s -- --project PROJEKTNAME
 ```
 
 ## Konfigurationsoptionen
@@ -223,6 +223,47 @@ Der MCP-Tools-Integrator ist modular aufgebaut und kann leicht erweitert oder an
    ```
    Lösung: Führen Sie './memory-bank/vector_index/scripts/install_dependencies.sh' aus.
    ```
+
+5. **Berechtigungsverwaltungsprobleme**:
+   ```
+   Lösung: Führen Sie './setup-permissions.sh' aus, um alle Dateiberechtigungen zu aktualisieren.
+   ```
+
+6. **"vector_index: Kommando nicht gefunden" Fehler**:
+   ```
+   Dieser Fehler tritt in älteren Versionen des Skripts auf und wurde in der aktuellen Version behoben.
+   Lösung: Aktualisieren Sie auf die neueste Version des master-init.sh-Skripts.
+   ```
+
+7. **"Zugriff auf 'package.json' nicht möglich" Fehler**:
+   ```
+   Dieser Fehler kann auftreten, wenn MCP-Tools deaktiviert sind, wurde aber in der aktuellen Version behoben.
+   Lösung: Aktualisieren Sie auf die neueste Version des master-init.sh-Skripts oder verwenden Sie --no-mcp-tools.
+   ```
+
+### Validierung der Installation
+
+Um zu überprüfen, ob Ihre Installation korrekt funktioniert:
+
+```bash
+# Führen Sie das Produktionstestskript aus
+./core/scripts/production-test.sh
+
+# Oder für einen simulierten curl-Test
+./core/scripts/production-test.sh --curl
+```
+
+Der Produktionstest validiert alle kritischen Komponenten und stellt sicher, dass die Installation fehlerfrei funktioniert.
+
+### Produktions-Installation
+
+Für die Verwendung in der Produktion sollten Sie folgenden Befehl verwenden:
+
+```bash
+curl -sSfL https://github.com/Vesias/AGI-System-Public/raw/main/core/scripts/master-init.sh | bash -s -- --project MeinProjekt
+```
+
+Dieser Befehl lädt die neueste Version des Skripts herunter und führt es mit standardmäßigen Produktionseinstellungen aus.
 
 ## Quellcode
 
