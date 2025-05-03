@@ -1,0 +1,25 @@
+{
+  "tool_permissions": {
+    "project_level": {
+      "allowed_tools": [
+        "Bash(**)",
+        "Python(**)",
+        "File(**)",
+        "Web(**)",
+        "API(**)"
+      ],
+      "restricted_tools": [],
+      "execution_context": "project_sandbox"
+    },
+    "memory_bank_access": {
+      "read": true,
+      "write": true,
+      "modify_structure": true
+    },
+    "mcp_integration": {
+      "auto_connect": true,
+      "share_context": true,
+      "allow_chaining": true
+    }
+  }
+}

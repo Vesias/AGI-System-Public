@@ -69,29 +69,64 @@ Die Berechtigungen werden in der Datei `permissions/access-control.json` verwalt
 
 ## Berechtigungsverwaltung
 
-### Benutzer hinzufügen
+Für die Berechtigungsverwaltung stehen zwei Skripte zur Verfügung:
 
-Verwende das `permissions-manage.sh` Skript, um einen neuen Benutzer hinzuzufügen:
+1. `permissions-parser.sh` (empfohlen): Robuste Lösung mit verbesserten Funktionen
+2. `permissions-manage.sh` (legacy): Ältere Version, erfordert jq
+
+### Verwendung von permissions-parser.sh
+
+Die empfohlene Methode zur Verwaltung von Berechtigungen:
+
+#### Benutzer auflisten
+
+```bash
+./core/scripts/permissions-parser.sh list
+```
+
+#### Benutzer hinzufügen
+
+```bash
+./core/scripts/permissions-parser.sh add "role" "username" "email@example.com" 
+```
+
+Wobei `role` einer der folgenden Werte sein kann: `admin`, `contributor`, `viewer`.
+
+#### Benutzer entfernen
+
+```bash
+./core/scripts/permissions-parser.sh remove "email@example.com"
+```
+
+#### Benutzer aktualisieren
+
+```bash
+./core/scripts/permissions-parser.sh update "email@example.com" "new_role"
+```
+
+### Ältere Methode (permissions-manage.sh)
+
+Falls aus Kompatibilitätsgründen benötigt:
+
+#### Benutzer hinzufügen
 
 ```bash
 ./core/scripts/permissions-manage.sh add "username" "email@example.com" "role"
 ```
 
-Wobei `role` einer der folgenden Werte sein kann: `admin`, `contributor`, `viewer`.
-
-### Benutzer entfernen
+#### Benutzer entfernen
 
 ```bash
 ./core/scripts/permissions-manage.sh remove "email@example.com"
 ```
 
-### GPG-Schlüssel hinzufügen
+#### GPG-Schlüssel hinzufügen
 
 ```bash
 ./core/scripts/permissions-manage.sh gpg "email@example.com" "gpg_key_id"
 ```
 
-### Benutzer auflisten
+#### Benutzer auflisten
 
 ```bash
 ./core/scripts/permissions-manage.sh list

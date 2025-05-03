@@ -1,0 +1,72 @@
+{
+  "project": {
+    "name": "{{PROJECT_NAME}}",
+    "created": "{{DATE}}",
+    "type": "{{PROJECT_TYPE}} Project",
+    "path": "{{PROJECT_PATH}}"
+  },
+  "mcp_tools": {
+    "enabled": {{MCP_TOOLS_ENABLED}},
+    "permissions": {
+      "read": {{MCP_READ_PERMISSION}},
+      "write": {{MCP_WRITE_PERMISSION}},
+      "execute": {{MCP_EXECUTE_PERMISSION}},
+      "network": {{MCP_NETWORK_PERMISSION}}
+    }
+  },
+  "vector_database": {
+    "type": "{{VECTOR_DB_TYPE}}",
+    "endpoint": "{{VECTOR_DB_ENDPOINT}}",
+    "collections": {{VECTOR_DB_COLLECTIONS}}
+  },
+  "memory_rules": {
+    "retention_policy": "perpetual",
+    "context_window": "infinite",
+    "embedding_model": "{{EMBEDDING_MODEL}}",
+    "semantic_search": {{SEMANTIC_SEARCH_ENABLED}}
+  },
+  "user_preferences": {
+    "coding_style": {
+      "indentation": "{{INDENTATION_STYLE}}",
+      "naming_convention": "{{NAMING_CONVENTION}}",
+      "max_line_length": {{MAX_LINE_LENGTH}}
+    },
+    "documentation_style": {
+      "language": "{{DOCUMENTATION_LANGUAGE}}",
+      "format": "{{DOCUMENTATION_FORMAT}}"
+    },
+    "ai_interaction": {
+      "verbosity": "{{AI_VERBOSITY}}",
+      "code_explanation_level": "{{CODE_EXPLANATION_LEVEL}}",
+      "autonomy_level": "{{AUTONOMY_LEVEL}}"
+    }
+  },
+  "automation": {
+    "memory_bank_sync": {{MEMORY_BANK_SYNC_ENABLED}},
+    "code_formatting": {{CODE_FORMATTING_ENABLED}},
+    "git_hooks": {{GIT_HOOKS_ENABLED}},
+    "test_automation": {{TEST_AUTOMATION_ENABLED}}
+  },
+  "integrations": {
+    "git": {
+      "enabled": {{GIT_ENABLED}},
+      "repository": "{{GIT_REPOSITORY}}",
+      "branch": "{{GIT_BRANCH}}"
+    },
+    "ci_cd": {
+      "enabled": {{CI_CD_ENABLED}},
+      "provider": "{{CI_CD_PROVIDER}}",
+      "config_path": "{{CI_CD_CONFIG_PATH}}"
+    },
+    "cloud": {
+      "enabled": {{CLOUD_ENABLED}},
+      "provider": "{{CLOUD_PROVIDER}}",
+      "region": "{{CLOUD_REGION}}"
+    }
+  },
+  "metadata": {
+    "created_with": "AGI-System",
+    "version": "{{AGI_SYSTEM_VERSION}}",
+    "last_updated": "{{DATE}}"
+  }
+}

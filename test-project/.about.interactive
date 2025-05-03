@@ -1,0 +1,72 @@
+{
+  "project": {
+    "name": "test-project",
+    "created": "2025-05-03",
+    "type": "standard Project",
+    "path": "/home/jan/AGI-System-Public/test-project"
+  },
+  "mcp_tools": {
+    "enabled": true,
+    "permissions": {
+      "read": true,
+      "write": true,
+      "execute": true,
+      "network": true
+    }
+  },
+  "vector_database": {
+    "type": "qdrant",
+    "endpoint": "http://localhost:6333",
+    "collections": ["project_context""code_embeddings""documentation"]
+  },
+  "memory_rules": {
+    "retention_policy": "perpetual",
+    "context_window": "infinite",
+    "embedding_model": "claude-3-haiku",
+    "semantic_search": true
+  },
+  "user_preferences": {
+    "coding_style": {
+      "indentation": "spaces",
+      "naming_convention": "camelCase",
+      "max_line_length": 80
+    },
+    "documentation_style": {
+      "language": "de",
+      "format": "markdown"
+    },
+    "ai_interaction": {
+      "verbosity": "moderate",
+      "code_explanation_level": "basic",
+      "autonomy_level": "medium"
+    }
+  },
+  "automation": {
+    "memory_bank_sync": true,
+    "code_formatting": true,
+    "git_hooks": true,
+    "test_automation": true
+  },
+  "integrations": {
+    "git": {
+      "enabled": true,
+      "repository": "{{GIT_REPOSITORY}}",
+      "branch": "main"
+    },
+    "ci_cd": {
+      "enabled": false,
+      "provider": "github-actions",
+      "config_path": ".github/workflows"
+    },
+    "cloud": {
+      "enabled": false,
+      "provider": "vercel",
+      "region": "eu-central-1"
+    }
+  },
+  "metadata": {
+    "created_with": "AGI-System",
+    "version": "1.0.0",
+    "last_updated": "2025-05-03"
+  }
+}

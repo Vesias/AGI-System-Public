@@ -6,12 +6,14 @@ Willkommen zur Dokumentation des AGI-Systems. Diese Dokumente bieten umfassende 
 
 ### Erste Schritte
 - [Erste Schritte](GETTING_STARTED.md) - Installationsanleitung und erste Schritte
+- [Onboarding-Anleitung](ONBOARDING_GUIDE.md) - Ausführliche Einführung für neue Benutzer
 - [Berechtigungssystem](PERMISSION_SYSTEM.md) - Benutzer- und Zugriffsverwaltung
 - [Sicherheitsrichtlinien](../SECURITY.md) - Sicherheitskonzept und Best Practices
 
 ### Kernkonzepte
 - [Memory-Bank System](MEMORY_BANK_GUIDE.md) - Struktur und Verwendung der Memory-Bank
 - [MCP-Tools Guide](MCP_TOOLS_GUIDE.md) - Integration und Verwendung von MCP-Tools
+- [Claude Code Integration](CLAUDE_CODE_INTEGRATION.md) - Terminal-basierte KI-Codierung
 - [Vibe Coding Framework](VIBE_CODING_GUIDE.md) - Moderner Tech-Stack für Webentwicklung
 
 ### Fortgeschrittene Themen
@@ -28,6 +30,8 @@ AGI-System
 ├── Memory-Bank ──────┐
 │                     │
 ├── MCP-Tools ────────┼─── Claude & andere KI-Modelle
+│                     │
+├── Claude Code ──────┤
 │                     │
 ├── Vibe Coding ──────┘
 │

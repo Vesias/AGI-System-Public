@@ -1,37 +1,6 @@
 {
-  "repository": "AGI-System-Public",
-  "owner": "Vesias",
-  "permissions": {
-    "admin": [
-      {
-        "username": "Vesias",
-        "email": "vesiassr@gmail.com",
-        "gpg_key_id": "user_gpg_key_placeholder",
-        "granted_on": "2025-05-03",
-        "access_level": "full"
-      }
-    ],
-    "contributors": [],
-    "viewers": []
-  },
-  "access_levels": {
-    "full": {
-      "description": "Vollständiger Zugriff auf alle Bereiche des Repositories",
-      "can_access": ["core", "templates", "permissions", ".git-crypt"],
-      "can_modify": ["core", "templates", "permissions", ".git-crypt"],
-      "can_manage_users": true
-    },
-    "contributor": {
-      "description": "Kann nicht-sensible Inhalte bearbeiten und verschlüsselte Inhalte lesen",
-      "can_access": ["core", "templates", "permissions", ".git-crypt"],
-      "can_modify": ["core", "templates"],
-      "can_manage_users": false
-    },
-    "viewer": {
-      "description": "Kann nur nicht-sensible Inhalte sehen und verwenden",
-      "can_access": ["core", "templates"],
-      "can_modify": [],
-      "can_manage_users": false
-    }
-  }
+  "admin": [],
+  "contributors": [],
+  "viewers": [],
+  "last_updated": "2025-05-03"
 }

@@ -1,0 +1,10 @@
+{
+  "name": "test-project",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AGI-Projekt mit MCP-Tools",
+  "scripts": {
+    "mcp:start": "echo 'MCP-Tools sind konfiguriert und können mit Claude verwendet werden.'"
+  },
+  "dependencies": {}
+}
